@@ -79,40 +79,39 @@ This isn’t black-box AI. It’s **visible thinking**.
 **🧾 Backup Verified**: July 6, 2025 (screenshot proof)
 
 ---
-
 ## 🧪 Test Cases: Real Mathematical Use-Cases
 
 ### 📍 Test Case 1: Proving a Theorem in Hyperbolic Geometry
 
-![Hyperbolic](https://github.com/manjunathakoshinum/AI-Theorem-Discovery/blob/theorem-ai/docs/images/test_case_1_hyperbolic.png?raw=true)
+![Test Case 1](https://github.com/manjunathakoshinum/AI-Theorem-Discovery/blob/theorem-ai/results/Test%20Case%201%20Proving%20a%20Theorem%20in%20Hyperbolic%C2%A0Geometry.png?raw=true)
 
 ### 📍 Test Case 2: Generating a Conjecture in Fractal Geometry
 
-![Fractal](https://github.com/manjunathakoshinum/AI-Theorem-Discovery/blob/theorem-ai/docs/images/test_case_2_fractal.png?raw=true)
+![Test Case 2](https://github.com/manjunathakoshinum/AI-Theorem-Discovery/blob/theorem-ai/results/Test%20Case%202%20Generating%20a%20Conjecture%20in%20Fractal%C2%A0Geometry.png?raw=true)
 
 ### 📍 Test Case 3: Explaining a Concept in Non-Euclidean Geometry
 
-![NonEuclidean](https://github.com/manjunathakoshinum/AI-Theorem-Discovery/blob/theorem-ai/docs/images/test_case_3_noneuclidean.png?raw=true)
+![Test Case 3](https://github.com/manjunathakoshinum/AI-Theorem-Discovery/blob/theorem-ai/results/Test%20Case%203%20Explaining%20a%20Concept%20in%20Non-Euclidean%C2%A0Geometry.png?raw=true)
 
 ### 📍 Test Case 4: Refining a Previous Output in Hyperbolic Geometry
 
-![Refined](https://github.com/manjunathakoshinum/AI-Theorem-Discovery/blob/theorem-ai/docs/images/test_case_4_refinement.png?raw=true)
+![Test Case 4](https://github.com/manjunathakoshinum/AI-Theorem-Discovery/blob/theorem-ai/results/Test%20Case%204%20Refining%20a%20Previous%20Output%20in%20Hyperbolic%C2%A0Geometry.png?raw=true)
 
 ### 🌐 Neo4j Graph Output
 
-![Graph](https://github.com/manjunathakoshinum/AI-Theorem-Discovery/blob/theorem-ai/docs/images/neo4j_graph.png?raw=true)
+![Graph Output](https://github.com/manjunathakoshinum/AI-Theorem-Discovery/blob/theorem-ai/results/graph_neo4j.png?raw=true)
 
 ### 📈 GNN Training Output
 
-![GNN](https://github.com/manjunathakoshinum/AI-Theorem-Discovery/blob/theorem-ai/docs/images/gnn_training_output.png?raw=true)
+![GNN Output](https://github.com/manjunathakoshinum/AI-Theorem-Discovery/blob/theorem-ai/results/GNN%20training%20output.png?raw=true)
 
 ### 🛠️ System Architecture
 
-![Architecture](https://github.com/manjunathakoshinum/AI-Theorem-Discovery/blob/theorem-ai/docs/images/system_architecture.png?raw=true)
+![System Architecture](https://github.com/manjunathakoshinum/AI-Theorem-Discovery/blob/theorem-ai/results/system%20architecture.png?raw=true)
 
 ### 🗄️ PostgreSQL Snapshot
 
-![Postgres](https://github.com/manjunathakoshinum/AI-Theorem-Discovery/blob/theorem-ai/docs/images/database_postgres.png?raw=true)
+![PostgreSQL](https://github.com/manjunathakoshinum/AI-Theorem-Discovery/blob/theorem-ai/results/database%20postgre.png?raw=true)
 
 ---
 
@@ -161,7 +160,6 @@ Secrets are stored securely using `.env`, with push protection enforced by GitHu
 | certificate of publication of paper.png                           | Certificate of Paper Publication | ![View](https://github.com/manjunathakoshinum/AI-Theorem-Discovery/blob/theorem-ai/docs/certificate%20of%20publication%20of%20paper.png?raw=true) |
 | UI-interface.png                                                  | Screenshot of UI Interface       | ![View](https://github.com/manjunathakoshinum/AI-Theorem-Discovery/blob/theorem-ai/docs/UI-interface.png?raw=true)                                |
 
----
 
 ## 🤝 Team & Contact
 
