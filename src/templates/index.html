@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unconventional Mathematics Prover</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/socket.io-client@4/dist/socket.io.min.js"></script>
+    <link rel="stylesheet" href="/static/styles.css">
+    <link rel="icon" href="static/favicon.png">
+</head>
+<body class="bg-gray-900 text-white min-h-screen flex flex-col">
+    <!-- Header -->
+    <header class="bg-gray-800 p-4">
+        <h1 class="text-2xl font-bold text-center">Unconventional Mathematics Prover</h1>
+    </header>
+    <!-- Main Content -->
+    <main class="flex-1 p-4 flex flex-col md:flex-row gap-4 max-w-6xl mx-auto">
+        <!-- Sidebar -->
+        <div class="w-full md:w-80 bg-gray-800 p-4 rounded-lg space-y-4">
+            <h2 class="text-lg font-semibold">Controls</h2>
+            <div class="space-y-2">
+                <label class="font-medium">Task</label>
+                <div class="grid grid-cols-2 gap-2" id="task-buttons">
+                    <button class="task-btn bg-blue-600 p-2 rounded-lg hover:bg-blue-700" data-task="prove">Prove</button>
+                    <button class="task-btn bg-blue-600 p-2 rounded-lg hover:bg-blue-700" data-task="conjecture">Conjecture</button>
+                    <button class="task-btn bg-blue-600 p-2 rounded-lg hover:bg-blue-700" data-task="explain">Explain</button>
+                    <button class="task-btn bg-blue-600 p-2 rounded-lg hover:bg-blue-700" data-task="refine">Refine</button>
+                </div>
+            </div>
+            <div class="space-y-2">
+                <label class="font-medium">Style</label>
+                <div class="flex gap-2" id="style-buttons">
+                    <button class="style-btn bg-green-600 p-2 rounded-lg hover:bg-green-700 flex-1" data-style="unconventional">Unconventional</button>
+                    <button class="style-btn bg-green-600 p-2 rounded-lg hover:bg-green-700 flex-1" data-style="computational">Computational</button>
+                </div>
+            </div>
+            <div class="space-y-2">
+                <label class="font-medium">Domain</label>
+                <select id="domain-select" class="w-full p-2 bg-gray-700 rounded-lg">
+                    <option value="tropical_geometry">Tropical Geometry</option>
+                    <option value="hyperbolic_geometry">Hyperbolic Geometry</option>
+                    <option value="p_adic_numbers">p-adic Numbers</option>
+                </select>
+            </div>
+            <div class="space-y-2">
+                <label class="font-medium">Discipline</label>
+                <input id="discipline-input" type="text" class="w-full p-2 bg-gray-700 rounded-lg" placeholder="e.g., physics">
+            </div>
+            <div class="space-y-2 hidden" id="refine-upload">
+                <label class="font-medium">Upload File</label>
+                <input id="refine-input" type="file" accept=".md,.json" class="w-full">
+            </div>
+            <button id="demo-mode" class="w-full p-2 bg-purple-600 rounded-lg hover:bg-purple-700">Run Demo</button>
+            <button id="toggle-debug" class="w-full p-2 bg-gray-600 rounded-lg hover:bg-gray-700">Toggle Debug</button>
+        </div>
+        <!-- Chat Area -->
+        <div class="flex-1 bg-gray-800 rounded-lg p-4 flex flex-col">
+            <div id="chat-box" class="flex-1 p-4 max-h-[500px] overflow-y-auto space-y-4"></div>
+            <div id="thinking-animation" class="hidden text-center p-4">
+                <div class="spinner"></div>
+                <p>Processing... This may take a few minutes for complex proofs.</p>
+                <div id="loading-bar" class="w-full bg-gray-700 h-2 mt-2 rounded">
+                    <div id="loading-progress" class="bg-blue-600 h-2 rounded" style="width: 0%"></div>
+                </div>
+            </div>
+            <div class="p-4 border-t border-gray-700">
+                <div class="flex gap-2">
+                    <textarea id="theorem-input" class="flex-1 p-2 bg-gray-700 rounded-lg" rows="3" placeholder="Enter theorem (e.g., Prove the angle sum in a hyperbolic triangle is less than 180 degrees)"></textarea>
+                    <div class="flex flex-col gap-2">
+                        <button id="submit-button" class="p-2 bg-blue-600 rounded-lg hover:bg-blue-700">Submit</button>
+                        <button id="retry-button" class="p-2 bg-yellow-600 rounded-lg hover:bg-yellow-700 hidden">Retry</button>
+                    </div>
+                </div>
+                <div id="latex-preview" class="p-2 bg-gray-900 rounded-lg mt-2 hidden"></div>
+            </div>
+        </div>
+    </main>
+    <!-- Debug Panel -->
+    <div id="debug-panel" class="hidden max-w-6xl mx-auto mt-4 bg-gray-800 p-4 rounded-lg">
+        <h2 class="text-lg font-semibold">Debug Output</h2>
+        <pre id="debug-output" class="p-2 bg-gray-900 rounded-lg max-h-60 overflow-y-auto"></pre>
+    </div>
+    <script src="/static/script.js"></script>
+</body>
+</html>

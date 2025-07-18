@@ -1,0 +1,5 @@
+{
+  "task": "prove",
+  "domain": "hyperbolic_geometry",
+  "response": "\\[ \\cosh(c) = \\cosh(a) \\cosh(b) \\text{ for a hyperbolic right triangle.} \\]"
+}

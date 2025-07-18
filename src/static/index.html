@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unconventional Mathematics Discovery</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/socket.io-client@4/dist/socket.io.min.js"></script>
+    <link rel="stylesheet" href="/static/styles.css">
+    <link rel="icon" href="/static/favicon.ico">
+</head>
+<body class="bg-gradient-to-br from-gray-900 to-gray-700 text-white flex min-h-screen font-sans">
+    <!-- Sidebar -->
+    <div id="sidebar" class="w-80 bg-gray-800 p-6 flex flex-col space-y-6 shadow-lg" aria-label="Control Panel">
+        <h2 class="text-2xl font-bold text-blue-400">Mathematics Explorer</h2>
+        <div class="space-y-4">
+            <label class="font-semibold text-lg">Task</label>
+            <div class="flex flex-wrap gap-3" id="task-buttons">
+                <button class="task-btn bg-blue-600 p-3 rounded-lg hover:bg-blue-500 transition-all" data-task="prove" aria-label="Prove a theorem">Prove</button>
+                <button class="task-btn bg-blue-600 p-3 rounded-lg hover:bg-blue-500 transition-all" data-task="conjecture" aria-label="Discover a conjecture">Discover</button>
+                <button class="task-btn bg-blue-600 p-3 rounded-lg hover:bg-blue-500 transition-all" data-task="explain" aria-label="Explain a concept">Explain</button>
+                <button class="task-btn bg-blue-600 p-3 rounded-lg hover:bg-blue-500 transition-all" data-task="refine" aria-label="Refine a proof">Refine</button>
+                <button class="task-btn bg-purple-600 p-3 rounded-lg hover:bg-purple-500 transition-all" data-task="explore" aria-label="Free exploration">Free Exploration</button>
+            </div>
+        </div>
+        <div class="space-y-4">
+            <label class="font-semibold text-lg">Style</label>
+            <div class="flex flex-wrap gap-3" id="style-buttons">
+                <button class="style-btn bg-green-600 p-3 rounded-lg hover:bg-green-500 transition-all" data-style="unconventional" aria-label="Unconventional reasoning">Unconventional</button>
+                <button class="style-btn bg-green-600 p-3 rounded-lg hover:bg-green-500 transition-all" data-style="computational" aria-label="Computational reasoning">Computational</button>
+                <button class="style-btn bg-green-600 p-3 rounded-lg hover:bg-green-500 transition-all" data-style="geometric" aria-label="Geometric reasoning">Geometric</button>
+            </div>
+        </div>
+        <div class="space-y-4">
+            <label class="font-semibold text-lg">Domain</label>
+            <select id="domain-select" class="w-full p-3 bg-gray-700 rounded-lg text-white focus:ring-2 focus:ring-blue-500" aria-label="Select mathematical domain">
+                <option value="hyperbolic_geometry">Hyperbolic Geometry</option>
+                <option value="non_euclidean_geometry">Non-Euclidean Geometry</option>
+                <option value="tropical_geometry">Tropical Geometry</option>
+                <option value="p_adic_numbers">p-adic Numbers</option>
+                <option value="fractal_geometry">Fractal Geometry</option>
+                <option value="category_theory">Category Theory</option>
+                <option value="surreal_numbers">Surreal Numbers</option>
+                <option value="nonstandard_analysis">Nonstandard Analysis</option>
+            </select>
+        </div>
+        <div class="space-y-4">
+            <label class="font-semibold text-lg">Discipline</label>
+            <input id="discipline-input" type="text" class="w-full p-3 bg-gray-700 rounded-lg text-white focus:ring-2 focus:ring-blue-500" placeholder="e.g., Physics, Cryptography" aria-label="Enter related discipline">
+        </div>
+        <div class="space-y-4 hidden" id="refine-upload">
+            <label class="font-semibold text-lg">Upload File</label>
+            <input id="refine-input" type="file" accept=".md,.json,.txt" class="w-full text-white" aria-label="Upload file for refinement">
+        </div>
+        <button id="demo-mode" class="p-3 bg-purple-600 rounded-lg hover:bg-purple-500 transition-all" aria-label="Run demo mode">Run Demo</button>
+        <button id="toggle-debug" class="p-3 bg-gray-600 rounded-lg hover:bg-gray-500 transition-all" aria-label="Toggle debug panel">Toggle Debug</button>
+    </div>
+    <!-- Main Content -->
+    <div class="flex-1 p-8">
+        <div class="w-full max-w-4xl mx-auto bg-gray-800 rounded-xl shadow-2xl">
+            <div class="p-6 bg-gray-900 rounded-t-xl">
+                <h1 class="text-3xl font-bold text-blue-300">Unconventional Mathematics Discovery</h1>
+                <p class="text-gray-400">Explore hyperbolic geometry, non-Euclidean spaces, and beyond</p>
+            </div>
+            <div id="chat-box" class="p-6 max-h-[500px] overflow-y-auto space-y-6" aria-live="polite"></div>
+            <div id="thinking-animation" class="hidden text-center p-6">
+                <div class="spinner"></div>
+                <p class="text-blue-400">Unraveling mathematical mysteries...</p>
+                <div id="loading-bar" class="w-full bg-gray-700 h-3 mt-4 rounded-full">
+                    <div id="loading-progress" class="bg-blue-500 h-3 rounded-full transition-all duration-500" style="width: 0%"></div>
+                </div>
+            </div>
+            <div class="p-6 border-t border-gray-700">
+                <div class="flex space-x-4">
+                    <div class="flex-1 relative">
+                        <textarea id="theorem-input" class="w-full p-3 bg-gray-700 rounded-lg text-white focus:ring-2 focus:ring-blue-500" rows="4" placeholder="Enter theorem or query (e.g., \cosh(c) = \cosh(a) \cosh(b))" aria-label="Enter theorem or mathematical query"></textarea>
+                        <div id="latex-suggestions" class="absolute w-full bg-gray-900 rounded-lg mt-1 max-h-40 overflow-y-auto hidden"></div>
+                    </div>
+                    <div class="flex flex-col space-y-3">
+                        <button id="submit-button" class="p-3 bg-blue-600 rounded-lg hover:bg-blue-500 transition-all" aria-label="Submit query">Submit</button>
+                        <button id="retry-button" class="p-3 bg-yellow-600 rounded-lg hover:bg-yellow-500 transition-all hidden" aria-label="Retry last query">Retry</button>
+                    </div>
+                </div>
+                <div id="latex-preview" class="p-4 bg-gray-900 rounded-lg mt-4 hidden" aria-live="polite"></div>
+            </div>
+        </div>
+        <div id="visualization-panel" class="w-full max-w-4xl mx-auto mt-6 bg-gray-800 p-6 rounded-xl shadow-lg hidden">
+            <h2 class="text-xl font-bold text-blue-400">Hyperbolic Visualization</h2>
+            <div id="d3-visualization" class="w-full h-96"></div>
+        </div>
+        <div id="debug-panel" class="hidden w-full max-w-4xl mx-auto mt-6 bg-gray-800 p-6 rounded-xl shadow-lg">
+            <h2 class="text-xl font-bold text-blue-400">Debug Output</h2>
+            <pre id="debug-output" class="p-4 bg-gray-900 rounded-lg text-sm"></pre>
+        </div>
+    </div>
+    <script src="/static/script.js"></script>
+</body>
+</html>

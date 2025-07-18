@@ -1,0 +1,12 @@
+# requirements.txt for Discovery of Unconventional Mathematics
+# Python 3.10 environment
+
+torch==2.1.0
+torch-geometric==2.3.1
+scikit-learn==1.3.2
+numpy==1.24.3
+tqdm==4.66.1
+py2neo==2021.2.3
+flask==2.3.3
+werkzeug==2.3.7
+llama-cpp-python==0.2.24
