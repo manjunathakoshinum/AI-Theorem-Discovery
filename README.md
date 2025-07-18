@@ -21,38 +21,35 @@
 
 ## Why NeuroMath?
 
-Mathematics is the final domain where machines still trail minds.
-NeuroMath changes that. This project is not about automation — it is about **evolution of thought**.
+Mathematics is the final frontier of structured thought where even the best AI struggles. NeuroMath was built not to automate math, but to **transform** it.
 
-We built NeuroMath to answer bold questions:
+We didn’t build this for grades. We built it because we couldn’t stop thinking about the question: *Can machines create and understand mathematical truths like we do?*
 
-* Can AI generate and refine original theorems?
-* Can symbolic logic and deep learning co-create?
-* Can formal mathematics be both provable *and* creative?
+This isn't a side project. It's an invitation to reimagine logic, proof, and symbolic intelligence.
 
-**NeuroMath isn’t an academic exercise — it’s an intellectual leap.**
+* Can AI co-create new theorems?
+* Can we blend formal rigor with generative exploration?
+* Can symbolic engines evolve their logic like neural minds?
+
+**NeuroMath is a belief system turned into code.**
 
 ---
 
 ## The Vision: What We Set Out to Solve
 
-Traditional theorem proving is rigid.
-Pure neural models lack structure.
-We fused both.
+Traditional theorem provers demand precision but lack intuition.
+Neural networks explore patterns but lack grounding.
+We fused them — to bring structure to thought and creativity to logic.
 
-**From symbolic rigor to neuro-inspired evolution**, we wanted to:
-
-✅ Discover new theorems in hyperbolic & non-Euclidean geometry
-✅ Refine or mutate axioms based on formal systems
-✅ Validate outputs using Lean, Coq, and MetaMath
-✅ Use LLMs and GNNs to learn abstract mathematical patterns
-✅ Present results in structured, explainable, verifiable form
+✅ Discover original theorems in hyperbolic & non-Euclidean geometry
+✅ Refine axioms through symbolic + neural mutation
+✅ Validate logic using Lean, Coq, MetaMath
+✅ Train GNNs on mathematical proof graphs
+✅ Store proofs in PostgreSQL and graph relationships in Neo4j
 
 ---
 
 ## How It Works: System Intelligence Flow
-
-Our stack merges LLM creativity, graph logic, and formal provers.
 
 ```mermaid
 flowchart TD
@@ -63,105 +60,125 @@ flowchart TD
     E --> F[Visual UI for Exploration]
 ```
 
-Each block is modular and extensible. Output from LLaMA feeds into GNNs that form symbolic reasoning clusters. Theorems are verified and indexed using PostgreSQL + Neo4j.
+Each block is independent. Extensible. Interpretable.
+This isn’t black-box AI. It’s **visible thinking**.
 
 ---
 
 ## What We've Built: Features and Impact
 
-* 🧠 **AI-Powered Theorem Generation** using structured prompts + LLaMA 3.5
-* 🔎 **GNN-based Prediction** for symbolic structure linkage
-* ✅ **Formal Proof Validation** with Lean, Coq, and MetaMath
-* 🌐 **Theorem Graphs** using Neo4j knowledge graphs
-* 🗂️ **Structured Representation** in XML / JSON
-* 📊 **UI Interface** for query + exploration
+* 🧠 **LLM-driven Theorem Generation**
+* 🔍 **GNN-based Symbolic Relationship Prediction**
+* ✅ **Formal Proof Verification** using Lean, Coq, MetaMath
+* 🌐 **Neo4j Knowledge Graphs** for theorem dependencies
+* 📊 **UI Interface** to explore proofs and queries
+* 📁 **Structured Representations** in XML, JSON
 
-**Published**: Peer-reviewed in IJRPR, May 2025
-**Duration**: Jan 26 → May 25, 2025
-**Backup Verified**: July 6, 2025 (screenshot proof)
-
----
-
-## Test Cases: Real Mathematical Use-Cases
-
-| Test Case | Domain                                         | Link                       |
-| --------- | ---------------------------------------------- | -------------------------- |
-| 1         | Proving a Theorem in Hyperbolic Geometry       | [View](PLACEHOLDER_LINK_1) |
-| 2         | Generating Conjecture in Fractal Geometry      | [View](PLACEHOLDER_LINK_2) |
-| 3         | Explaining a Concept in Non-Euclidean Geometry | [View](PLACEHOLDER_LINK_3) |
-| 4         | Refining Prior Output in Hyperbolic Geometry   | [View](PLACEHOLDER_LINK_4) |
-| 5         | Graph Output (Neo4j)                           | [View](PLACEHOLDER_LINK_5) |
-| 6         | GNN Training Output                            | [View](PLACEHOLDER_LINK_6) |
-| 7         | PostgreSQL Theorem Index                       | [View](PLACEHOLDER_LINK_7) |
-| 8         | Full Architecture PDF                          | [View](PLACEHOLDER_LINK_8) |
-| 9         | Gantt Timeline Chart                           | [View](PLACEHOLDER_LINK_9) |
+**📰 Published**: Peer-reviewed in IJRPR, May 2025
+**📆 Duration**: Jan 26 – May 25, 2025
+**🧾 Backup Verified**: July 6, 2025 (screenshot proof)
 
 ---
 
-## LLaMA 3.5 Integration
+## 🧪 Test Cases: Real Mathematical Use-Cases
 
-LLaMA 3.5 was used for symbolic rephrasing, logical mutations, and theorem-style formatting.
+### 📍 Test Case 1: Proving a Theorem in Hyperbolic Geometry
 
-### How We Use It:
+![Hyperbolic](https://github.com/manjunathakoshinum/AI-Theorem-Discovery/blob/theorem-ai/docs/images/test_case_1_hyperbolic.png?raw=true)
+
+### 📍 Test Case 2: Generating a Conjecture in Fractal Geometry
+
+![Fractal](https://github.com/manjunathakoshinum/AI-Theorem-Discovery/blob/theorem-ai/docs/images/test_case_2_fractal.png?raw=true)
+
+### 📍 Test Case 3: Explaining a Concept in Non-Euclidean Geometry
+
+![NonEuclidean](https://github.com/manjunathakoshinum/AI-Theorem-Discovery/blob/theorem-ai/docs/images/test_case_3_noneuclidean.png?raw=true)
+
+### 📍 Test Case 4: Refining a Previous Output in Hyperbolic Geometry
+
+![Refined](https://github.com/manjunathakoshinum/AI-Theorem-Discovery/blob/theorem-ai/docs/images/test_case_4_refinement.png?raw=true)
+
+### 🌐 Neo4j Graph Output
+
+![Graph](https://github.com/manjunathakoshinum/AI-Theorem-Discovery/blob/theorem-ai/docs/images/neo4j_graph.png?raw=true)
+
+### 📈 GNN Training Output
+
+![GNN](https://github.com/manjunathakoshinum/AI-Theorem-Discovery/blob/theorem-ai/docs/images/gnn_training_output.png?raw=true)
+
+### 🛠️ System Architecture
+
+![Architecture](https://github.com/manjunathakoshinum/AI-Theorem-Discovery/blob/theorem-ai/docs/images/system_architecture.png?raw=true)
+
+### 🗄️ PostgreSQL Snapshot
+
+![Postgres](https://github.com/manjunathakoshinum/AI-Theorem-Discovery/blob/theorem-ai/docs/images/database_postgres.png?raw=true)
+
+---
+
+## 🧠 LLaMA 3.5 Integration
+
+LLaMA 3.5 was used to generate symbolic reasoning variants through prompt mutation.
 
 ```bash
-# Install & configure llama.cpp
-python llama_runner.py --prompt "Generate a variant of ..."
+# Example usage
+python llama_runner.py --prompt "Refine this theorem: ..."
 ```
 
-Tokens are managed via `.env` and protected via `.gitignore` to ensure secure access.
+Secrets are stored securely using `.env`, with push protection enforced by GitHub.
 
 ---
 
-## System Architecture
+## 🏗️ System Architecture Overview
 
-* 🧠 LLM (LLaMA 3.5 via llama.cpp)
-* 📐 Symbolic Engines: Lean, Coq, MetaMath
-* 🧬 GNNs: PyTorch Geometric, GATv2
-* 🌐 Graph DB: Neo4j
-* 🗄️ SQL DB: PostgreSQL
-* 💻 Backend: Flask, TQDM, py2neo
-* 📊 UI: Python / HTML-based interactive shell
+* 🤖 **LLM**: LLaMA 3.5 (via llama.cpp)
+* 📐 **Symbolic Engines**: Lean, Coq, MetaMath
+* 🔗 **Graph AI**: PyG, GATv2
+* 🗄️ **Databases**: PostgreSQL, Neo4j
+* 🧠 **Middleware**: Flask, py2neo, Torch
 
 ---
 
-## Project Timeline
+## 📆 Project Timeline (Gantt)
 
-| Phase               | Date Range                |
-| ------------------- | ------------------------- |
-| Ideation + Planning | Jan 26 – Feb 10           |
-| Prototype Models    | Feb 11 – Mar 10           |
-| GNN + DB Layer      | Mar 11 – Apr 10           |
-| Full Integration    | Apr 11 – May 10           |
-| Testing + Docs      | May 11 – May 25           |
-| 📸 Final Backup     | July 6 (Screenshot Proof) |
-
----
-
-## Professional Documentation & Artifacts
-
-* 📰 [Published Paper (IJRPR, May 2025)](PLACEHOLDER_PAPER_LINK)
-* 📄 [Final Project Docs (Presidency Univ Approved)](PLACEHOLDER_DOC_LINK)
-* 🖼️ [Publication Certificate](PLACEHOLDER_CERTIFICATE_IMG)
-* 🖼️ [Backup Screenshot (6 July)](PLACEHOLDER_BACKUP_IMG)
-* 🧪 [UI Interface](PLACEHOLDER_UI_LINK)
+| Phase               | Date Range      |
+| ------------------- | --------------- |
+| Ideation & Planning | Jan 26 – Feb 10 |
+| Prototype Modeling  | Feb 11 – Mar 10 |
+| GNN + DB Layer      | Mar 11 – Apr 10 |
+| Integration Phase   | Apr 11 – May 10 |
+| Final Docs + Tests  | May 11 – May 25 |
+| 📸 Backup Verified  | July 6, 2025    |
 
 ---
 
-## Team & Contact
+## 📚 Professional Documentation & Artifacts
 
-| Name                | Role                           |
-| ------------------- | ------------------------------ |
-| Manjunatha Koshinum | AI Architect, GNN & RL Systems |
-| Akhil Nag           | Symbolic Math & Theorem Logic  |
-| Varshi RDX          | Model Engineering & Evaluation |
-| T Sai Reddy         | Proof System Integration       |
+| 📄 File Name                                                      | Description                      | Link                                                                                                                                              |
+| ----------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| BCA\_FYP\_42\_Ai\_Driven\_Mathematical\_Theorems\_And\_Axioms.pdf | Final Project Documentation      | [View](https://github.com/manjunathakoshinum/AI-Theorem-Discovery/blob/theorem-ai/docs/BCA_FYP_42_Ai_Driven_Mathematical_Theorems_And_Axioms.pdf) |
+| publication\_of\_unconventional\_mathematics.pdf                  | Published Research Paper         | [View](https://github.com/manjunathakoshinum/AI-Theorem-Discovery/blob/theorem-ai/docs/publication_of_unconventional_mathematics.pdf)             |
+| certificate of publication of paper.png                           | Certificate of Paper Publication | ![View](https://github.com/manjunathakoshinum/AI-Theorem-Discovery/blob/theorem-ai/docs/certificate%20of%20publication%20of%20paper.png?raw=true) |
+| UI-interface.png                                                  | Screenshot of UI Interface       | ![View](https://github.com/manjunathakoshinum/AI-Theorem-Discovery/blob/theorem-ai/docs/UI-interface.png?raw=true)                                |
 
-📫 Reach Us:
+---
 
-* 📧 [manjunathakoshinum@gmail.com](mailto:manjunathakoshinum@gmail.com)
+## 🤝 Team & Contact
+
+| Name                | Role                              |
+| ------------------- | --------------------------------- |
+| Manjunatha Koshinum | Lead Architect – AI & GNN Systems |
+| Akhil Nag           | Symbolic Logic & Formal Math      |
+| Varshi RDX          | Model Engineering + Testing       |
+| T Sai Reddy         | Proof Integration & Evaluation    |
+
+📫 Contact:
+
+* 📩 [manjunathakoshinum@gmail.com](mailto:manjunathakoshinum@gmail.com)
 * 🔗 [LinkedIn](https://www.linkedin.com/in/manjunathah)
 
 ---
 
-> *This isn’t just a project — it’s a working vision of how machines might one day extend the limits of formal knowledge.*
+> *“We didn’t build NeuroMath to impress. We built it to express what we believe AI can become in the language of mathematics.”*
+
+**Crafted like a product. Polished like a theory. Driven by belief.**
