@@ -1,126 +1,167 @@
-# AI-Driven Discovery or Improvement of Unconventional Mathematical Theorems and Axioms  
+# 🚀 NeuroMath: Redefining Mathematical Discovery with AI
 
-## 📌 Overview  
-This project focuses on leveraging **Artificial Intelligence, Neuro-Symbolic AI, Reinforcement Learning, and Theorem Proving** to discover, refine, and enhance unconventional mathematical theorems and axioms, specifically in **Hyperbolic Geometry & Non-Euclidean Mathematics**.  
-
-Our goal is to develop a **powerful AI-driven framework** capable of:  
-✅ Extracting, validating, and improving mathematical theorems  
-✅ Discovering new postulates and axioms  
-✅ Utilizing **graph-based AI**, **theorem provers (Lean, Coq, MetaMath)**, and **evolutionary search**  
-✅ Enabling high-impact research in unconventional mathematics  
+> *"Not just another AI project. A new frontier in how machines think, prove, and discover mathematical truths."*
 
 ---
 
-## 📁 Project Structure  
+## 📜 Table of Contents
 
-
-## 🚀 Features  
-
-🔹 **AI-Powered Theorem Discovery** – Generates potential new theorems using AI models  
-🔹 **Automated Theorem Extraction** – Collects and structures existing Non-Euclidean theorems in JSON/XML  
-🔹 **Symbolic AI & Proof Verification** – Uses **Lean, Coq, MetaMath** for logical validation  
-🔹 **Graph Neural Networks for Theorem Prediction** – Analyzes relationships between theorems  
-🔹 **Evolutionary Search & Reinforcement Learning** – Optimizes theorem discovery process  
-
----
-
-## 🔧 Technologies & Tools  
-
-- **Machine Learning & AI**: PyTorch, TensorFlow, Hugging Face Transformers  
-- **Graph-Based Methods**: NetworkX, DGL (Deep Graph Library), PyG (PyTorch Geometric)  
-- **Symbolic Mathematics**: Lean, Coq, MetaMath, SymPy, LaTeX  
-- **Reinforcement Learning**: OpenAI Gym, Proximal Policy Optimization (PPO)  
-- **Data Processing**: Pandas, NumPy, XML Parsing  
-- **Visualization**: Matplotlib, Plotly, GraphViz  
+* [Why NeuroMath?](#why-neuromath)
+* [The Vision: What We Set Out to Solve](#the-vision-what-we-set-out-to-solve)
+* [How It Works: System Intelligence Flow](#how-it-works-system-intelligence-flow)
+* [What We've Built: Features and Impact](#what-weve-built-features-and-impact)
+* [Test Cases: Real Mathematical Use-Cases](#test-cases-real-mathematical-use-cases)
+* [LLaMA 3.5 Integration](#llama-35-integration)
+* [System Architecture](#system-architecture)
+* [Project Timeline](#project-timeline)
+* [Professional Documentation & Artifacts](#professional-documentation--artifacts)
+* [Team & Contact](#team--contact)
 
 ---
 
-## 📊 Dataset & Theorem Representation  
+## Why NeuroMath?
 
-All collected and AI-generated theorems are stored in **structured formats**:  
+Mathematics is the final domain where machines still trail minds.
+NeuroMath changes that. This project is not about automation — it is about **evolution of thought**.
 
-### **Example Theorem JSON Format**
-```json
-{
-  "theorem": {
-    "name": "Hyperbolic Parallel Postulate",
-    "mathematical_domain": "Hyperbolic Geometry",
-    "authors": ["Bolyai", "Lobachevsky"],
-    "year_of_discovery": "1830",
-    "formal_statement": {
-      "text": "In hyperbolic geometry, through a point not on a given line, there exist infinitely many lines parallel to the given line.",
-      "symbolic_representation": {
-        "latex": "L \\parallel P",
-        "lean": "theorem hyperbolic_parallel {P L : Line} : Exists (fun Q => Q ∥ L)"
-      }
-    },
-    "proof": {
-      "formal_proof": "Using hyperbolic plane models...",
-      "computational_validation": {
-        "verified": true,
-        "tool_used": "Lean"
-      }
-    }
-  }
-}
-```
-### 🔥 How to Use
-## 1️⃣ Clone the Repository
-```
-git clone https://github.com/your-username/AI-driven-theorem-discovery.git
-cd AI-driven-theorem-discovery
-```
-## 2️⃣ Install Dependencies
-```
-pip install -r requirements.txt
-```
-## 3️⃣ Run AI Models for Theorem Discovery
-```
-python models/theorem_discovery.py
+We built NeuroMath to answer bold questions:
 
-```
-## 4️⃣ Validate Theorem Proofs using Theorem Provers
-```
-cd theorem_provers
-lean lean_proofs.lean
-coqc coq_proofs.v
-metamath metamath_proofs.mm
-```
-## 5️⃣ Train Graph Neural Network for Theorem Predictions
-```
-python models/graph_neural_network.py
+* Can AI generate and refine original theorems?
+* Can symbolic logic and deep learning co-create?
+* Can formal mathematics be both provable *and* creative?
+
+**NeuroMath isn’t an academic exercise — it’s an intellectual leap.**
+
+---
+
+## The Vision: What We Set Out to Solve
+
+Traditional theorem proving is rigid.
+Pure neural models lack structure.
+We fused both.
+
+**From symbolic rigor to neuro-inspired evolution**, we wanted to:
+
+✅ Discover new theorems in hyperbolic & non-Euclidean geometry
+✅ Refine or mutate axioms based on formal systems
+✅ Validate outputs using Lean, Coq, and MetaMath
+✅ Use LLMs and GNNs to learn abstract mathematical patterns
+✅ Present results in structured, explainable, verifiable form
+
+---
+
+## How It Works: System Intelligence Flow
+
+Our stack merges LLM creativity, graph logic, and formal provers.
+
+```mermaid
+flowchart TD
+    A[Human/Seed Input] --> B[LLaMA 3.5 - Symbolic Mutation]
+    B --> C[GNN Reasoning Layer]
+    C --> D[Theorem Prover - Lean, Coq, MetaMath]
+    D --> E[Database + Graph Store]
+    E --> F[Visual UI for Exploration]
 ```
 
-# 📄 Research Papers & References
-## 📖 Key Papers Referenced:
+Each block is modular and extensible. Output from LLaMA feeds into GNNs that form symbolic reasoning clusters. Theorems are verified and indexed using PostgreSQL + Neo4j.
 
-Bolyai & Lobachevsky’s Hyperbolic Geometry (1830)
-AI-Augmented Theorem Proving with Lean & Coq (2024)
-Graph-Based Machine Learning for Mathematical Discovery (2025)
-📚 Want to contribute? See CONTRIBUTING.md for guidelines!
+---
 
-# ⚖️ License
- This project is licensed under the Apache License – See LICENSE for details.
+## What We've Built: Features and Impact
 
-✨ Contributors
-👨‍💻 Team Member 1 – Lead Developer & Researcher
-👩‍💻 Team Member 2 – Mathematical Model Expert
-👨‍💻 Team Member 3 – Machine Learning & Theorem Proving
-👩‍💻 Team Member 4 – Graph AI & Reinforcement Learning
+* 🧠 **AI-Powered Theorem Generation** using structured prompts + LLaMA 3.5
+* 🔎 **GNN-based Prediction** for symbolic structure linkage
+* ✅ **Formal Proof Validation** with Lean, Coq, and MetaMath
+* 🌐 **Theorem Graphs** using Neo4j knowledge graphs
+* 🗂️ **Structured Representation** in XML / JSON
+* 📊 **UI Interface** for query + exploration
 
-🎯 Future Work
-🔹 Refining AI-Based Theorem Generation
-🔹 Enhancing Theorem Proving Accuracy
-🔹 Integrating with Mathematical Knowledge Graphs
-🔹 Publishing Research Papers
+**Published**: Peer-reviewed in IJRPR, May 2025
+**Duration**: Jan 26 → May 25, 2025
+**Backup Verified**: July 6, 2025 (screenshot proof)
 
-💬 Get in Touch!
-📧 Contact us at: manjunathakoshinum@gmail.com,
-                  akhilnag07@gmail.com,
-                  varshirdx@gmail.com,
-                  tsaireddy11@gmail.com
-                  
-🔗 Follow us on LinkedIn https://www.linkedin.com/in/manjunathah/
+---
 
-🚀 Join us in revolutionizing theorem discovery with AI!
+## Test Cases: Real Mathematical Use-Cases
 
+| Test Case | Domain                                         | Link                       |
+| --------- | ---------------------------------------------- | -------------------------- |
+| 1         | Proving a Theorem in Hyperbolic Geometry       | [View](PLACEHOLDER_LINK_1) |
+| 2         | Generating Conjecture in Fractal Geometry      | [View](PLACEHOLDER_LINK_2) |
+| 3         | Explaining a Concept in Non-Euclidean Geometry | [View](PLACEHOLDER_LINK_3) |
+| 4         | Refining Prior Output in Hyperbolic Geometry   | [View](PLACEHOLDER_LINK_4) |
+| 5         | Graph Output (Neo4j)                           | [View](PLACEHOLDER_LINK_5) |
+| 6         | GNN Training Output                            | [View](PLACEHOLDER_LINK_6) |
+| 7         | PostgreSQL Theorem Index                       | [View](PLACEHOLDER_LINK_7) |
+| 8         | Full Architecture PDF                          | [View](PLACEHOLDER_LINK_8) |
+| 9         | Gantt Timeline Chart                           | [View](PLACEHOLDER_LINK_9) |
+
+---
+
+## LLaMA 3.5 Integration
+
+LLaMA 3.5 was used for symbolic rephrasing, logical mutations, and theorem-style formatting.
+
+### How We Use It:
+
+```bash
+# Install & configure llama.cpp
+python llama_runner.py --prompt "Generate a variant of ..."
+```
+
+Tokens are managed via `.env` and protected via `.gitignore` to ensure secure access.
+
+---
+
+## System Architecture
+
+* 🧠 LLM (LLaMA 3.5 via llama.cpp)
+* 📐 Symbolic Engines: Lean, Coq, MetaMath
+* 🧬 GNNs: PyTorch Geometric, GATv2
+* 🌐 Graph DB: Neo4j
+* 🗄️ SQL DB: PostgreSQL
+* 💻 Backend: Flask, TQDM, py2neo
+* 📊 UI: Python / HTML-based interactive shell
+
+---
+
+## Project Timeline
+
+| Phase               | Date Range                |
+| ------------------- | ------------------------- |
+| Ideation + Planning | Jan 26 – Feb 10           |
+| Prototype Models    | Feb 11 – Mar 10           |
+| GNN + DB Layer      | Mar 11 – Apr 10           |
+| Full Integration    | Apr 11 – May 10           |
+| Testing + Docs      | May 11 – May 25           |
+| 📸 Final Backup     | July 6 (Screenshot Proof) |
+
+---
+
+## Professional Documentation & Artifacts
+
+* 📰 [Published Paper (IJRPR, May 2025)](PLACEHOLDER_PAPER_LINK)
+* 📄 [Final Project Docs (Presidency Univ Approved)](PLACEHOLDER_DOC_LINK)
+* 🖼️ [Publication Certificate](PLACEHOLDER_CERTIFICATE_IMG)
+* 🖼️ [Backup Screenshot (6 July)](PLACEHOLDER_BACKUP_IMG)
+* 🧪 [UI Interface](PLACEHOLDER_UI_LINK)
+
+---
+
+## Team & Contact
+
+| Name                | Role                           |
+| ------------------- | ------------------------------ |
+| Manjunatha Koshinum | AI Architect, GNN & RL Systems |
+| Akhil Nag           | Symbolic Math & Theorem Logic  |
+| Varshi RDX          | Model Engineering & Evaluation |
+| T Sai Reddy         | Proof System Integration       |
+
+📫 Reach Us:
+
+* 📧 [manjunathakoshinum@gmail.com](mailto:manjunathakoshinum@gmail.com)
+* 🔗 [LinkedIn](https://www.linkedin.com/in/manjunathah)
+
+---
+
+> *This isn’t just a project — it’s a working vision of how machines might one day extend the limits of formal knowledge.*
